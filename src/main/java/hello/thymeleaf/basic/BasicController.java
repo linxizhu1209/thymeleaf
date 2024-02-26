@@ -116,9 +116,14 @@ public class BasicController {
         list.add(new User("UserC",30));
 
         model.addAttribute("users",list);
-
-
     }
+    @GetMapping("/condition")
+    public String condition(Model model){
+        addUsers(model);
+        return "basic/condition";
+    }
+
+
 
     @Data
     static class User{
